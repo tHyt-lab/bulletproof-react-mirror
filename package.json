@@ -1,8 +1,7 @@
 {
-  "name": "vite-project",
+  "name": "bulletproof-react-mirror",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -51,6 +50,7 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
     "msw": "^1.2.1",
+    "plop": "^3.1.2",
     "prettier": "^2.8.8",
     "prop-types": "^15.8.1",
     "storybook": "^7.0.20",

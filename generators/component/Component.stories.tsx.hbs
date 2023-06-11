@@ -1,0 +1,18 @@
+import { Meta, StoryFn } from '@storybook/react';
+
+import { {{ properCase name }}, {{ properCase name }}Props } from './{{properCase name}}';
+
+const meta: Meta = {
+  title: 'Component/{{ properCase name }}',
+  component: {{ properCase name }},
+  parameters: {
+    controls: { expanded: true },
+  },
+};
+
+export default meta;
+
+const Templete: StoryFn<{{ properCase name }}Props> = (props) => < {{ properCase name }} {...props} />
+
+export const Default = Templete.bind({});
+Default.args = {};
