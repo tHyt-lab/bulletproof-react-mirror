@@ -23,7 +23,7 @@ export const LoginForm = ({ onSuccess }: LoginFormProps) => {
   return (
     <Container size="xs">
       <Form<LoginValues, typeof validateSchema>
-        onSubmit={async (values) => console.log(values)}
+        onSubmit={async () => onSuccess()}
         schema={validateSchema}
       >
         {({ register, formState }) => (
