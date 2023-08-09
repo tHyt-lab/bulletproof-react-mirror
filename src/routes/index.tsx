@@ -1,4 +1,5 @@
-import { useRoutes } from "react-router-dom";
+import { Landing } from "@/features/misc";
+import { RouteObject, useRoutes } from "react-router-dom";
 import { publicRoutes } from "./public";
 
 export interface PartialRouteObject {
@@ -9,6 +10,7 @@ export interface PartialRouteObject {
 }
 
 export const AppRoutes = () => {
-  const element = useRoutes([...publicRoutes]);
+  const commonRoutes: RouteObject[] = [{ path: "/", element: <Landing /> }];
+  const element = useRoutes([...publicRoutes, ...commonRoutes]);
   return <>{element}</>;
 };
