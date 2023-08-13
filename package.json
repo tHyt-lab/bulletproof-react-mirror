@@ -17,6 +17,7 @@
     "@mantine/core": "^6.0.19",
     "@mantine/hooks": "^6.0.19",
     "axios": "^1.4.0",
+    "clsx": "^2.0.0",
     "dayjs": "^1.11.9",
     "lodash": "^4.17.21",
     "nanoid": "^4.0.2",
