@@ -1,13 +1,12 @@
-import { Button } from "@/components/Elements/Button/Button";
-import { PasswordInput } from "@/components/Form";
-import { Form } from "@/components/Form/Form";
-import { TextInput } from "@/components/Form/TextInput";
-import { Container, Stack } from "@mantine/core";
-import { z } from "zod";
+import { Button } from '@/components/Elements/Button/Button';
+import { InputField } from '@/components/Form';
+import { Form } from '@/components/Form/Form';
+import { Container, Stack } from '@mantine/core';
+import { z } from 'zod';
 
 const validateSchema = z.object({
-  email: z.string().min(1, "Required"),
-  password: z.string().min(1, "Required"),
+  email: z.string().min(1, 'Required'),
+  password: z.string().min(1, 'Required'),
 });
 
 type LoginValues = {
@@ -28,15 +27,16 @@ export const LoginForm = ({ onSuccess }: LoginFormProps) => {
       >
         {({ register, formState }) => (
           <Stack spacing={16}>
-            <TextInput
+            <InputField
               type="email"
-              registration={register("email")}
-              error={formState.errors.email?.message}
+              registration={register('email')}
+              error={formState.errors.email}
               placeholder="xxx@example.com"
             />
-            <PasswordInput
-              registration={register("password")}
-              error={formState.errors.password?.message}
+            <InputField
+              type="password"
+              registration={register('password')}
+              error={formState.errors.password}
               placeholder="password"
             />
             <Button type="submit">Login</Button>
