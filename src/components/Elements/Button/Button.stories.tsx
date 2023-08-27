@@ -1,13 +1,13 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Button } from './Button';
 
-const meta: Meta = {
+const meta = {
   title: 'Components/Elements/Button',
   component: Button,
   parameters: {
     controls: { expanded: true },
   },
-};
+} satisfies Meta<typeof Button>;
 
 export default meta;
 
