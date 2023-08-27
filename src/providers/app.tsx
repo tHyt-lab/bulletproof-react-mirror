@@ -1,4 +1,4 @@
-import { Box, Button, Loader } from "@mantine/core";
+import { Box, Button, Loader, MantineProvider } from "@mantine/core";
 import React from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import { HelmetProvider } from "react-helmet-async";
@@ -30,7 +30,9 @@ export const AppProvider = ({ children }: AppProviderProps) => {
     >
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <HelmetProvider>
-          <BrowserRouter>{children}</BrowserRouter>
+          <MantineProvider withGlobalStyles withNormalizeCSS>
+            <BrowserRouter>{children}</BrowserRouter>
+          </MantineProvider>
         </HelmetProvider>
       </ErrorBoundary>
     </React.Suspense>
