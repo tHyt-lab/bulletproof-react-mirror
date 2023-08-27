@@ -6,19 +6,19 @@ import { ZodType, ZodTypeDef } from 'zod';
 
 type FormProps<
   TFormValues extends FieldValues,
-  Schema extends ZodType<unknown, ZodTypeDef, unknown>
+  Schema extends ZodType<unknown, ZodTypeDef, unknown>,
 > = {
   className?: string;
   onSubmit: SubmitHandler<TFormValues>;
   children: (methods: UseFormReturn<TFormValues>) => React.ReactNode;
   options?: UseFormProps<TFormValues>;
   id?: string;
-  schema: Schema;
+  schema?: Schema;
 };
 
 export const Form = <
   TFormValues extends FieldValues,
-  Schema extends ZodType<unknown, ZodTypeDef, unknown>
+  Schema extends ZodType<unknown, ZodTypeDef, unknown>,
 >({
   onSubmit,
   children,
